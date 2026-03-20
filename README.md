@@ -22,13 +22,8 @@ Protecting the weekly earnings of Zomato and Swiggy delivery partners against un
 9. [AI Architecture](#9-ai-architecture)
 10. [System Architecture](#10-system-architecture)
 11. [Tech Stack](#11-tech-stack)
-12. [Project Structure](#12-project-structure)
-13. [Getting Started](#13-getting-started)
-14. [Platform Choice](#14-platform-choice)
-15. [Key Performance Indicators](#15-key-performance-indicators)
-16. [Development Roadmap](#16-development-roadmap)
-17. [Contributing](#17-contributing)
-
+12. [Platform Choice](#12-platform-choice)
+    
 ---
 
 ## 1. Who Is Our User?
@@ -61,7 +56,7 @@ Ravi's situation in one sentence:
 
 ## 2. What Problem Are We Solving?
 
-India has over 12 million platform-based delivery workers. They are completely exposed to income loss when external events — which they cannot control — force them off the road or reduce their earnings.
+India has over 12 million platform-based delivery workers. They face income loss when external events, which they cannot control, take them off the road or lower their earnings.
 
 ### The Explicit Gap
 
@@ -89,26 +84,26 @@ Workers lose income from ANY disruption:
 
 ### The Hidden Threat — GPS Fraud at Platform Scale
 
-Existing parametric platforms that rely on GPS coordinates alone are vulnerable to coordinated spoofing attacks. A group of workers can fake their location inside a declared weather zone from home, triggering false payouts and draining the liquidity pool within hours.
+Current parametric platforms that only use GPS coordinates are susceptible to coordinated spoofing attacks. It is possible for a group of employees to pretend to be in a designated weather zone from home, which could result in fraudulent payouts and quickly deplete the liquidity pool.
 
-GigShield solves this through a multi-signal fraud detection system that cross-validates worker presence using data that cannot all be faked simultaneously.
+This is resolved by GigShield's multi-signal fraud detection system, which uses data that cannot all be faked at once to cross-validate worker presence.
 
 ---
 
 ## 3. Our Solution — Earnings Floor Protection
-
+ 
 ### What Makes GigShield Different
-
+ 
 Most parametric insurance platforms do this:
-
+ 
 ```
 WHAT EVERYONE ELSE DOES:
 "If heavy rain detected in zone → Pay fixed Rs. 200"
 (Generic, easy to copy, exploitable)
 ```
-
+ 
 GigShield monitors what actually matters:
-
+ 
 ```
 OUR UNIQUE APPROACH:
 "If worker's actual earnings drop 70% below their personal
@@ -117,11 +112,11 @@ OUR UNIQUE APPROACH:
 → Pay the actual loss amount — not a fixed flat rate"
 (Personalized, fraud-proof, covers ALL disruptions)
 ```
-
-The core insight: **You cannot fake verified platform earnings data.** Zomato and Swiggy hold the ground truth. If a worker claims income loss but the platform shows they earned Rs. 350 today, the contradiction is caught instantly — no GPS check needed.
-
+ 
+The core insight: **You cannot fake verified platform earnings data.** 
+ 
 ### What vs. Traditional Approach
-
+ 
 | Aspect | Weather-Based Insurance | GigShield Earnings Floor |
 |---|---|---|
 | What it monitors | External weather events | Real earnings from platform API |
@@ -132,13 +127,13 @@ The core insight: **You cannot fake verified platform earnings data.** Zomato an
 | Detection method | Manual claim filing | Automatic — worker does nothing |
 | User friction | High — 5 or more steps | Zero — fully automatic |
 | Competitive moat | None — easy to copy | 6 to 12 months — requires platform partnerships |
-
+ 
 ### How It Works — The Insurance Model
-
-GigShield is parametric income insurance. The worker holds an active weekly policy. When a disruption occurs and affects their income, they file a claim through the app. The system then validates the claim using real earnings data and multiple signals — and approves or rejects it based on evidence, not just GPS.
-
+ 
+Parametric income insurance is what GigShield is. The employee has an active weekly policy. They use the app to submit a claim when something goes wrong that impacts their income. The claim is then verified by the system using multiple signals and actual earnings data, and it is approved or rejected based on evidence rather than just GPS.
+ 
 The key difference from traditional insurance: validation is instant and automated. The worker does not wait days or fill out paperwork. But the claim is still **initiated by the worker** — GigShield does not pay anything without a claim being raised.
-
+ 
 ```
 Worker holds an active weekly insurance policy
         |
@@ -171,18 +166,18 @@ Payout sent via UPI directly to worker's registered account
         v
 Claim history and payout record updated in worker dashboard
 ```
-
+ 
 The worker files a claim whenever a disruption impacts their income — during or after the event. There is no automatic monitoring that pays without a claim. Every payout follows a worker-initiated, system-validated claim.
-
+ 
 ---
 
 ## 4. Adversarial Defense and Anti-Spoofing Strategy
 
 ### The Market Crash Scenario
 
-A sophisticated syndicate of 500 delivery workers in a tier-1 city organized via localized Telegram groups. Using advanced GPS-spoofing applications, they faked their locations to appear inside a severe red-alert weather zone — while sitting safely at home. They triggered mass false payouts and instantly drained the platform's liquidity pool.
+500 delivery workers in a tier-1 city make up a sophisticated syndicate that is arranged through regional Telegram groups. They pretended to be inside a severe red-alert weather zone while safely at home by using sophisticated GPS-spoofing software. They immediately depleted the platform's liquidity pool and caused widespread fraudulent payouts.
 
-Simple GPS verification is officially obsolete. GigShield was built to survive exactly this attack.
+Officially, basic GPS verification is no longer valid. GigShield was designed to withstand precisely this kind of assault.
 
 ### Why GigShield Survives Where Others Collapse
 
@@ -208,11 +203,11 @@ GIGSHIELD EARNINGS FLOOR (SURVIVES):
 
 ### 1. The Differentiation — Genuine Worker vs. Bad Actor
 
-GigShield's primary differentiation does not rely on GPS at all. It relies on a fact that cannot be faked: **verified platform earnings data.**
+GPS is not the main differentiator of GigShield. It is based on an unchangeable fact: **verified platform earnings data.
 
-A genuine stranded worker has a real earnings drop visible in Zomato's or Swiggy's own database. A fraudster sitting at home who is still logged into the app and completing orders cannot simultaneously claim income loss — the platform data contradicts the claim the moment it is filed.
+In Zomato's or Swiggy's own database, a true stranded worker has a real wage decline. The platform data contradicts the claim as soon as it is submitted, so a fraudster sitting at home who is still logged into the app and completing orders cannot simultaneously claim income loss.
 
-Beyond the earnings check, GigShield runs a multi-signal cross-validation that a fraudster at home cannot pass simultaneously:
+GigShield performs a multi-signal cross-validation in addition to the earnings check, which a home fraudster cannot simultaneously pass:
 
 | Signal | Genuine Stranded Worker | GPS Spoofer at Home |
 |---|---|---|
@@ -406,40 +401,40 @@ All accumulated compensation across all categories is consolidated and paid out 
 ---
 
 ## 6. Persona-Based Scenarios and Workflow
-
+ 
 ### Scenario 1 — Monsoon Rain Block (Chennai, July)
-
+ 
 - GigShield monitors Ravi's earnings every 15 minutes via Swiggy API
 - At 2 PM, earnings drop to zero — 70% drop from Rs. 25 per hour baseline
 - IMD API confirms rainfall above 50mm per hour in pin code 600001
 - Peer workers in same zone also showing zero earnings — confirmed area-wide disruption
 - Fraud score: 14 — auto-approved
 - Payout: 5% of previous day earnings (Rs. 800) x 4 blocked hours = Rs. 160 added to weekly payout
-
+ 
 ### Scenario 2 — Local Strike or Curfew (Mumbai)
-
+ 
 - Social disruption API confirms zone-level bandh in pin code 400001
 - Platform API confirms 8 orders cancelled for Ravi during the event
 - Fraud score: 22 — auto-approved
 - Payout: 2% of each cancelled order value accumulated and added to weekly payout
-
+ 
 ### Scenario 3 — Platform Outage (Bengaluru)
-
+ 
 - Swiggy API shows server error status for 2 hours
 - Ravi's earnings drop to zero during the confirmed outage window
 - Fraud score: 8 — auto-approved
 - Payout: 1% of previous day earnings per blocked hour added to weekly payout
-
+ 
 ### Scenario 4 — Minor Accident
-
+ 
 - Worker manually reports inability to work via app
 - Medical certificate photo uploaded and verified within 24 hours
 - Payout: Previous month daily average x rest days added to weekly payout (max 7 days)
-
+ 
 ---
-
+ 
 ### Full Application Workflow
-
+ 
 ```
 WORKER ONBOARDING
     Register with phone number and Zomato or Swiggy partner ID
@@ -798,211 +793,7 @@ Phase 1 note: Platform APIs (Zomato, Swiggy) are simulated via mock data. All ot
 
 ---
 
-## 12. Project Structure
-
-```
-gigshield/
-|
-+-- README.md
-+-- CONTRIBUTING.md
-+-- LICENSE
-+-- .gitignore
-+-- .env.example
-+-- docker-compose.yml
-|
-+-- backend/
-|   +-- src/
-|   |   +-- main.py
-|   |   +-- config/
-|   |   |   +-- database.py
-|   |   |   +-- environment.py
-|   |   |   +-- constants.py
-|   |   +-- models/
-|   |   |   +-- worker.py
-|   |   |   +-- policy.py
-|   |   |   +-- claim.py
-|   |   |   +-- payout.py
-|   |   |   +-- disruption_event.py
-|   |   |   +-- fraud_log.py
-|   |   +-- controllers/
-|   |   |   +-- auth_controller.py
-|   |   |   +-- policy_controller.py
-|   |   |   +-- claim_controller.py
-|   |   |   +-- premium_controller.py
-|   |   |   +-- payout_controller.py
-|   |   +-- services/
-|   |   |   +-- baseline_calculation.py
-|   |   |   +-- real_time_monitoring.py
-|   |   |   +-- fraud_detection.py
-|   |   |   +-- payment_gateway.py
-|   |   |   +-- platform_api.py
-|   |   +-- routes/
-|   |   |   +-- auth_routes.py
-|   |   |   +-- policy_routes.py
-|   |   |   +-- claim_routes.py
-|   |   |   +-- admin_routes.py
-|   |   +-- middleware/
-|   |   |   +-- auth_middleware.py
-|   |   |   +-- error_handler.py
-|   |   |   +-- request_validator.py
-|   |   +-- ml/
-|   |       +-- baseline_model.py
-|   |       +-- fraud_detection_model.py
-|   |       +-- risk_assessment.py
-|   |       +-- premium_calculator.py
-|   |       +-- forecaster.py
-|   +-- database/
-|   |   +-- migrations/
-|   |   +-- seeds/
-|   |   +-- schema.sql
-|   +-- tests/
-|       +-- test_auth.py
-|       +-- test_policy.py
-|       +-- test_claim.py
-|       +-- test_fraud.py
-|
-+-- frontend/
-|   +-- src/
-|   |   +-- App.jsx
-|   |   +-- components/
-|   |   |   +-- Auth/
-|   |   |   |   +-- Login.jsx
-|   |   |   |   +-- Registration.jsx
-|   |   |   |   +-- KYC.jsx
-|   |   |   +-- Policy/
-|   |   |   |   +-- PolicyForm.jsx
-|   |   |   |   +-- PolicyCard.jsx
-|   |   |   |   +-- PolicyList.jsx
-|   |   |   +-- Claims/
-|   |   |   |   +-- ClaimStatus.jsx
-|   |   |   |   +-- ClaimHistory.jsx
-|   |   |   |   +-- AppealForm.jsx
-|   |   |   +-- Dashboard/
-|   |   |       +-- WorkerDashboard.jsx
-|   |   |       +-- AdminDashboard.jsx
-|   |   |       +-- Analytics.jsx
-|   |   +-- pages/
-|   |   |   +-- HomePage.jsx
-|   |   |   +-- DashboardPage.jsx
-|   |   |   +-- SettingsPage.jsx
-|   |   +-- services/
-|   |   |   +-- api.js
-|   |   |   +-- auth_service.js
-|   |   +-- styles/
-|   |       +-- global.css
-|   |       +-- variables.css
-|   +-- tests/
-|   +-- public/
-|       +-- index.html
-|
-+-- docs/
-|   +-- ARCHITECTURE.md
-|   +-- API.md
-|   +-- DATABASE.md
-|   +-- AI_ML.md
-|
-+-- ml-models/
-    +-- baseline_model.pkl
-    +-- fraud_detection_model.pkl
-    +-- requirements.txt
-```
-
----
-
-## 13. Getting Started
-
-### Prerequisites
-
-- Node.js v16 or higher
-- Python 3.8 or higher
-- PostgreSQL 12 or higher
-- Redis 6 or higher
-- Git
-- Docker (optional but recommended)
-
-### Quick Start — Local Development
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/gigshield.git
-cd gigshield
-
-# 2. Set up environment variables
-cp .env.example .env
-# Edit .env with your configuration
-
-# 3. Backend setup
-cd backend
-pip install -r requirements.txt
-python -m alembic upgrade head   # Database migrations
-uvicorn src.main:app --reload    # Start FastAPI dev server
-
-# 4. Frontend setup (new terminal)
-cd frontend
-npm install
-npm start    # Start React development server
-
-# 5. ML Services (new terminal)
-cd ml-models
-pip install -r requirements.txt
-python app.py
-
-# 6. Visit http://localhost:3000
-```
-
-### Using Docker
-
-```bash
-# Build and start all services
-docker-compose up --build
-
-# Application available at http://localhost:3000
-```
-
-### Environment Configuration
-
-Copy `.env.example` to `.env` and fill in the values. Key variables:
-
-```
-DATABASE_URL=postgresql://user:password@localhost:5432/gigshield
-REDIS_URL=redis://localhost:6379
-OPENWEATHER_API_KEY=your_key
-ZOMATO_API_KEY=your_key (mock for Phase 1)
-SWIGGY_API_KEY=your_key (mock for Phase 1)
-RAZORPAY_KEY_ID=rzp_test_your_key
-JWT_SECRET=your_secret
-EARNINGS_DROP_THRESHOLD=0.70
-TIER1_AUTO_APPROVE_THRESHOLD=30
-TIER2_VERIFY_THRESHOLD=60
-```
-
-### Running Tests
-
-```bash
-# Backend tests
-cd backend
-pytest -v
-
-# With coverage
-pytest --cov=src tests/
-
-# Frontend tests
-cd frontend
-npm test
-
-# With coverage
-npm run test:coverage
-```
-
-### Test Coverage Goals
-
-- Backend: above 80% coverage
-- Frontend: above 70% coverage
-- Critical paths (fraud detection, payout): 100% coverage
-
----
-
-## 14. Platform Choice
+## 11. Platform Choice
 
 **Mobile App (Primary — for the delivery worker)**
 
@@ -1016,7 +807,7 @@ Both platforms share the same FastAPI backend and PostgreSQL database with no da
 
 ---
 
-## 15. Key Performance Indicators
+## 12. Key Performance Indicators
 
 | Metric | Target |
 |---|---|
@@ -1033,138 +824,13 @@ Both platforms share the same FastAPI backend and PostgreSQL database with no da
 
 ---
 
-## 16. Development Roadmap
 
-### Phase 1 — Foundation (March 4 to 20)
-
-Theme: Know Your Delivery Worker
-
-- Worker registration and KYC verification
-- Personalized earnings baseline calculation (30-day history)
-- Real-time earnings monitoring (15-minute intervals)
-- Threshold detection (70% drop triggers investigation)
-- 5-layer fraud verification system design
-- Auto-claim trigger mechanism architecture
-- Basic admin dashboard
-- GitHub documentation (this README)
-
-Metrics:
-- System processes 100 workers
-- Baseline calculations accurate to 95%
-- Real-time monitoring below 2 second latency
+## Team - LeadToWin
+S.Buubes - CSE
+V.Pooja - CSE
+N.Ram Narren Gowtham - CSE
+V.Yogapoorvaja - CSE
 
 ---
 
-### Phase 2 — Core Features (March 21 to April 4)
-
-Theme: Protect Your Worker
-
-- Insurance policy management (weekly plans)
-- AI premium calculator (dynamic pricing via XGBoost)
-- 3-tier claims decision system
-- Auto-approval engine
-- Payment gateway integration (Razorpay test mode)
-- Claims tracking dashboard
-- Appeal process
-- 2-minute demo video
-
-Metrics:
-- 100 or more test workers with claims
-- 95% or higher correct auto-approval rate
-- 5-minute average claim processing time
-- 92% or higher appeal approval rate
-
----
-
-### Phase 3 — Scale and Security (April 5 to 17)
-
-Theme: Perfect for Your Worker
-
-- Ring detection algorithm
-- Advanced behavioral analysis and fraud monitoring dashboard
-- Multi-layer security hardening
-- Instant payout simulation (Razorpay sandbox, UPI simulator)
-- Intelligent dashboard for workers and insurers
-- Performance optimization (target under 100ms API response)
-- 5-minute demo video
-- Final pitch deck
-
-Metrics:
-- Handle 10,000 or more concurrent users
-- 99.9% uptime
-- 98% or higher fraud detection rate
-- Below 100ms API response time
-
----
-
-## 17. Contributing
-
-We welcome contributions from all developers, designers, and data scientists.
-
-### Setup for Contributors
-
-```bash
-# Clone repository
-git clone https://github.com/yourusername/gigshield.git
-cd gigshield
-
-# Create feature branch
-git checkout -b feature/your-feature-name
-
-# Make changes and commit
-git commit -m "feat: add new feature"
-
-# Push and create Pull Request
-git push origin feature/your-feature-name
-```
-
-### Commit Guidelines
-
-Format: `type(scope): subject`
-
-Types: `feat` `fix` `docs` `refactor` `test` `perf`
-
-Examples:
-```
-feat(auth): add JWT token refresh
-fix(claim): resolve auto-approval bug
-docs(api): update endpoints documentation
-test(fraud): add ring detection tests
-```
-
-### Code Standards
-
-JavaScript and React:
-- Components in PascalCase
-- Functions in camelCase
-- Constants in UPPER_SNAKE_CASE
-
-Python:
-- Functions in snake_case
-- Classes in PascalCase
-- Constants in UPPER_SNAKE_CASE
-
-### Security Rules
-
-- Never commit secrets — use .env files only
-- Validate all inputs
-- Sanitize all database queries
-- No hardcoded API keys or passwords in code
-
-### Before Submitting a PR
-
-- Code follows style guide
-- Tests written and passing
-- No console errors or warnings
-- No hardcoded secrets
-- Documentation updated if needed
-
----
-
-## Team
-
-*(Add your team name and member names here)*
-
----
-
-*Built for Guidewire DEVTrails 2026 — protecting India's gig economy, one week at a time.*
+                 *Every worker requires proper value for their hard work*
