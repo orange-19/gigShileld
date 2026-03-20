@@ -826,11 +826,11 @@ Both platforms share the same FastAPI backend and PostgreSQL database with no da
 
 
 ## Team - LeadToWin
-S.Buubes - CSE
-V.Pooja - CSE
-N.Ram Narren Gowtham - CSE
-V.Yogapoorvaja - CSE
+1.S.Buubes - CSE
+2.V.Pooja - CSE
+3.N.Ram Narren Gowtham - CSE
+4.V.Yogapoorvaja - CSE
 
 ---
 
-                 *Every worker requires proper value for their hard work*
+                 Every worker requires proper value for their hard work
